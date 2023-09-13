@@ -1,71 +1,73 @@
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * op_add - returns the sum of p and q.
- * @p: First integer
- * @q: Second integer
+ * op_add - returns the sum of a and b.
+ * @a: First integer
+ * @b: Second integer
  *
- * Return: Sum of p and q.
+ * Return: Sum of a and b.
  */
-int op_add(int p, int q)
+int op_add(int a, int b)
 {
-	return (p + q);
+	return (a + b);
 }
 
 /**
- * op_sub - returns the difference of p and q.
- * @p: First integer
- * @q: Second integer
+ * op_sub - returns the difference of a and b.
+ * @a: First integer
+ * @b: Second integer
  *
- * Return: Difference of p and q.
+ * Return: Difference of a and b.
  */
-int op_sub(int p, int q)
+int op_sub(int a, int b)
 {
-	return (p - q);
+	return (a - b);
 }
 
 /**
- * op_mul - returns the product of p and q.
- * @p: First integer
- * @q: Second integer
+ * op_mul - returns the product of a and b.
+ * @a: First integer
+ * @b: Second integer
  *
- * Return: Product of p and q.
+ * Return: Product of a and b.
  */
-int op_mul(int p, int q)
+int op_mul(int a, int b)
 {
-	return (p * q);
+	return (a * b);
 }
 
 /**
- * op_div - returns the result of the division of p by q.
- * @p: First integer
- * @q: Second integer
+ * op_div - returns the result of the division of a by b.
+ * @a: First integer
+ * @b: Second integer
  *
- * Return: Result of p divided by q.
+ * Return: Result of a divided by b.
  */
-int op_div(int p, int q)
+int op_div(int a, int b)
 {
-	if (q == 0)
+	if (b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	return (p / q);
+	return (a / b);
 }
 
 /**
- * op_mod - returns the remainder of the division of p by q.
- * @p: First integer
- * @q: Second integer
+ * op_mod - returns the remainder of the division of a by b.
+ * @a: First integer
+ * @b: Second integer
  *
- * Return: Remainder of p divided by q.
+ * Return: Remainder of a divided by b.
  */
-int op_mod(int p, int q)
+int op_mod(int a, int b)
 {
-	if (q == 0)
+	if (b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	return (p % q);
+	return (a % b);
 }
