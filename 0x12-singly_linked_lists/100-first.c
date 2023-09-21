@@ -7,6 +7,6 @@
 
 void __attribute__ ((constructor)) pre_main()
 {
-	printf("mbiniya my treasure! beautiful yet, you are so simple");
+	printf("You'ar treasure!and yet, you are so simple");
 	printf(",\nI love you endlessly!\n");
 }
