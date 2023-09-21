@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * pre_main - function executed before main
+ * pre_main - a function imprinted before main
  * Return: no return.
  */
 
 void __attribute__ ((constructor)) pre_main()
 {
-	printf("You're love! and yet, you must loved");
-	printf(",\nI bare my fruit upon my hand!\n");
+	printf("You're beat! and yet, you must allow");
+	printf(",\nI bore my house upon my back!\n");
 }
