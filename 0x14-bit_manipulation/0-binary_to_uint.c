@@ -1,39 +1,37 @@
 #include "main.h"
+
 /**
- * binary_to_uint - the program converts binary numbers
- * to integers/decimal numbers
+ * binary_to_uint - this code converts a binary number to an
+ * unsigned interger.
+ * @m: binary.
  *
- * @m: a character pointer to a string carrying the
- * binary numbers
- *
- * Return: the converted decimal (output)
+ * Return: unsigned int.
  */
 unsigned int binary_to_uint(const char *m)
 {
-	unsigned int len;
-	size_t i = 0;
-	size_t j = 0;
-	size_t sum = 0;
-	size_t pow = 1;
-	int base = 2;
+	unsigned int upi;
+	int len, base_two;
 
-	if (m == NULL)
+	if (!m)
 		return (0);
+
+	upi = 0;
+
 	for (len = 0; m[len] != '\0'; len++)
 		;
-	if (len == 1 && (m[0] == '0' || m[0] == '1'))
+
+	for (len--, base_two = 1; len >= 0; len--, base_two *= 2)
 	{
-		return (m[0] - 48);
+		if (m[len] != '0' && m[len] != '1')
+		{
+			return (0);
+		}
+
+		if (m[len] & 1)
+		{
+			upi += base_two;
+		}
 	}
-	for (i = 0; m[i] != '\0'; i++)
-	{
-		if (b[i] != '0' && m[i] != '1')
-		return (0);
-		for (j = len - 1; j > 0; j--)
-		pow = pow * base;
-		sum = sum + (pow * (m[i] - 48));
-		len--;
-		pow = 1;
-	}
-	return (sum);
+
+	return (upi);
 }
